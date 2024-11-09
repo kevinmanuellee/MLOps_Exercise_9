@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/kevinmanuel/Desktop/MLOps%20Model%20Workflow%20Exercises/lesson-3-data-validation/exercises/exercise_9/solution/mlruns/0/1be31a96c4254e8c9fc133e1f6b8d378/artifacts
+end_time: 1730902282144
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1be31a96c4254e8c9fc133e1f6b8d378
+run_name: unequaled-chimp-619
+run_uuid: 1be31a96c4254e8c9fc133e1f6b8d378
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730902266045
+status: 4
+tags: []
+user_id: kevinmanuel

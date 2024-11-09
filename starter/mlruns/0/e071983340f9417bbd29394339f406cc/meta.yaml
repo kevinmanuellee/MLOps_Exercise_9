@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/kevinmanuel/Desktop/MLOps%20Model%20Workflow%20Exercises/lesson-3-data-validation/exercises/exercise_9/starter/mlruns/0/e071983340f9417bbd29394339f406cc/artifacts
+end_time: 1730901713965
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e071983340f9417bbd29394339f406cc
+run_name: suave-sow-566
+run_uuid: e071983340f9417bbd29394339f406cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730901642601
+status: 4
+tags: []
+user_id: kevinmanuel

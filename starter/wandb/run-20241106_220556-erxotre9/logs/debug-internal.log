@@ -1,0 +1,191 @@
+2024-11-06 22:05:56,130 INFO    StreamThr :746 [internal.py:wandb_internal():86] W&B internal server running at pid: 746, started at: 2024-11-06 22:05:56.128038
+2024-11-06 22:05:56,131 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: status
+2024-11-06 22:05:56,134 INFO    WriterThread:746 [datastore.py:open_for_write():87] open: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/run-erxotre9.wandb
+2024-11-06 22:05:56,135 DEBUG   SenderThread:746 [sender.py:send():378] send: header
+2024-11-06 22:05:56,135 DEBUG   SenderThread:746 [sender.py:send():378] send: run
+2024-11-06 22:05:56,775 INFO    SenderThread:746 [dir_watcher.py:__init__():211] watching files in: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files
+2024-11-06 22:05:56,775 INFO    SenderThread:746 [sender.py:_start_run_threads():1099] run started: erxotre9 with start time 1730901956.130624
+2024-11-06 22:05:56,780 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: check_version
+2024-11-06 22:05:56,780 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: check_version
+2024-11-06 22:05:56,828 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: run_start
+2024-11-06 22:05:56,835 DEBUG   HandlerThread:746 [system_info.py:__init__():26] System info init
+2024-11-06 22:05:56,835 DEBUG   HandlerThread:746 [system_info.py:__init__():41] System info init done
+2024-11-06 22:05:56,835 INFO    HandlerThread:746 [system_monitor.py:start():194] Starting system monitor
+2024-11-06 22:05:56,835 INFO    SystemMonitor:746 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-11-06 22:05:56,835 INFO    HandlerThread:746 [system_monitor.py:probe():214] Collecting system info
+2024-11-06 22:05:56,836 INFO    SystemMonitor:746 [interfaces.py:start():190] Started cpu monitoring
+2024-11-06 22:05:56,837 DEBUG   HandlerThread:746 [system_info.py:probe():150] Probing system
+2024-11-06 22:05:56,837 INFO    SystemMonitor:746 [interfaces.py:start():190] Started disk monitoring
+2024-11-06 22:05:56,840 INFO    SystemMonitor:746 [interfaces.py:start():190] Started gpuapple monitoring
+2024-11-06 22:05:56,841 INFO    SystemMonitor:746 [interfaces.py:start():190] Started memory monitoring
+2024-11-06 22:05:56,841 INFO    SystemMonitor:746 [interfaces.py:start():190] Started network monitoring
+2024-11-06 22:05:56,846 DEBUG   HandlerThread:746 [gitlib.py:_init_repo():56] git repository is invalid
+2024-11-06 22:05:56,846 DEBUG   HandlerThread:746 [system_info.py:probe():198] Probing system done
+2024-11-06 22:05:56,846 DEBUG   HandlerThread:746 [system_monitor.py:probe():223] {'os': 'macOS-14.4.1-arm64-arm-64bit', 'python': '3.12.7', 'heartbeatAt': '2024-11-06T14:05:56.838694', 'startedAt': '2024-11-06T14:05:56.115475', 'docker': None, 'cuda': None, 'args': ('-s', '-vv', '.', '--reference_artifact', 'exercise_6/data_train.csv:latest', '--sample_artifact', 'exercise_6/data_test.csv:latest', '--ks_alpha', '0.05'), 'state': 'running', 'program': '/opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/bin/pytest', 'codePathLocal': None, 'host': 'Kevins-MBP', 'username': 'kevinmanuel', 'executable': '/opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/bin/python3.12', 'cpu_count': 12, 'cpu_count_logical': 12, 'cpu_freq': {'current': 4056, 'min': 696, 'max': 4056}, 'cpu_freq_per_core': [{'current': 4056, 'min': 696, 'max': 4056}], 'disk': {'/': {'total': 1858.1917190551758, 'used': 12.597797393798828}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 18.0}}
+2024-11-06 22:05:56,846 INFO    HandlerThread:746 [system_monitor.py:probe():224] Finished collecting system info
+2024-11-06 22:05:56,846 INFO    HandlerThread:746 [system_monitor.py:probe():227] Publishing system info
+2024-11-06 22:05:56,846 DEBUG   HandlerThread:746 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-11-06 22:05:57,248 DEBUG   HandlerThread:746 [system_info.py:_save_conda():219] Saving conda packages done
+2024-11-06 22:05:57,249 INFO    HandlerThread:746 [system_monitor.py:probe():229] Finished publishing system info
+2024-11-06 22:05:57,251 DEBUG   SenderThread:746 [sender.py:send():378] send: files
+2024-11-06 22:05:57,251 INFO    SenderThread:746 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-11-06 22:05:57,276 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: python_packages
+2024-11-06 22:05:57,276 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: python_packages
+2024-11-06 22:05:57,277 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: stop_status
+2024-11-06 22:05:57,277 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: stop_status
+2024-11-06 22:05:57,277 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-06 22:05:57,613 DEBUG   SenderThread:746 [sender.py:send():378] send: telemetry
+2024-11-06 22:05:57,781 INFO    Thread-12 :746 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/conda-environment.yaml
+2024-11-06 22:05:57,781 INFO    Thread-12 :746 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/output.log
+2024-11-06 22:05:57,781 INFO    Thread-12 :746 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/wandb-metadata.json
+2024-11-06 22:05:57,781 INFO    Thread-12 :746 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/requirements.txt
+2024-11-06 22:05:58,109 INFO    wandb-upload_0:746 [upload_job.py:push():131] Uploaded file /var/folders/x_/x0mlk2v57v90vn9m7n8z9blw0000gn/T/tmparvzjuslwandb/k9k9k7sj-wandb-metadata.json
+2024-11-06 22:05:59,491 DEBUG   SenderThread:746 [sender.py:send():378] send: use_artifact
+2024-11-06 22:05:59,787 INFO    Thread-12 :746 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/output.log
+2024-11-06 22:06:01,501 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: status_report
+2024-11-06 22:06:02,080 DEBUG   SenderThread:746 [sender.py:send():378] send: use_artifact
+2024-11-06 22:06:03,283 DEBUG   SenderThread:746 [sender.py:send():378] send: exit
+2024-11-06 22:06:03,283 INFO    SenderThread:746 [sender.py:send_exit():585] handling exit code: 0
+2024-11-06 22:06:03,283 INFO    SenderThread:746 [sender.py:send_exit():587] handling runtime: 6
+2024-11-06 22:06:03,283 INFO    SenderThread:746 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-11-06 22:06:03,284 INFO    SenderThread:746 [sender.py:send_exit():593] send defer
+2024-11-06 22:06:03,284 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,284 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 0
+2024-11-06 22:06:03,284 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,284 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-11-06 22:06:03,284 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 1
+2024-11-06 22:06:03,284 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,284 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 1
+2024-11-06 22:06:03,284 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,284 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-11-06 22:06:03,284 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 2
+2024-11-06 22:06:03,284 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,284 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 2
+2024-11-06 22:06:03,284 INFO    HandlerThread:746 [system_monitor.py:finish():203] Stopping system monitor
+2024-11-06 22:06:03,284 DEBUG   SystemMonitor:746 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-11-06 22:06:03,284 DEBUG   SystemMonitor:746 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-11-06 22:06:03,284 INFO    HandlerThread:746 [interfaces.py:finish():202] Joined cpu monitor
+2024-11-06 22:06:03,285 DEBUG   SystemMonitor:746 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-11-06 22:06:03,285 INFO    HandlerThread:746 [interfaces.py:finish():202] Joined disk monitor
+2024-11-06 22:06:03,328 INFO    HandlerThread:746 [interfaces.py:finish():202] Joined gpuapple monitor
+2024-11-06 22:06:03,328 INFO    HandlerThread:746 [interfaces.py:finish():202] Joined memory monitor
+2024-11-06 22:06:03,328 INFO    HandlerThread:746 [interfaces.py:finish():202] Joined network monitor
+2024-11-06 22:06:03,328 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,328 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-11-06 22:06:03,328 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 3
+2024-11-06 22:06:03,328 DEBUG   SenderThread:746 [sender.py:send():378] send: telemetry
+2024-11-06 22:06:03,328 DEBUG   SenderThread:746 [sender.py:send():378] send: stats
+2024-11-06 22:06:03,328 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,328 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 3
+2024-11-06 22:06:03,328 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,328 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-11-06 22:06:03,328 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 4
+2024-11-06 22:06:03,328 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,328 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 4
+2024-11-06 22:06:03,329 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,329 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-11-06 22:06:03,329 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 5
+2024-11-06 22:06:03,329 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,329 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 5
+2024-11-06 22:06:03,329 DEBUG   SenderThread:746 [sender.py:send():378] send: summary
+2024-11-06 22:06:03,329 INFO    SenderThread:746 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-11-06 22:06:03,329 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,329 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-11-06 22:06:03,329 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 6
+2024-11-06 22:06:03,329 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,329 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 6
+2024-11-06 22:06:03,329 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,329 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-11-06 22:06:03,330 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: status_report
+2024-11-06 22:06:03,602 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 7
+2024-11-06 22:06:03,602 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:03,602 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 7
+2024-11-06 22:06:03,603 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:03,603 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-11-06 22:06:03,804 INFO    Thread-12 :746 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/config.yaml
+2024-11-06 22:06:03,805 INFO    Thread-12 :746 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/wandb-summary.json
+2024-11-06 22:06:04,288 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-06 22:06:05,646 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 8
+2024-11-06 22:06:05,646 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: poll_exit
+2024-11-06 22:06:05,646 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:05,646 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 8
+2024-11-06 22:06:05,647 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:05,647 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-11-06 22:06:05,647 INFO    SenderThread:746 [job_builder.py:build():298] Attempting to build job artifact
+2024-11-06 22:06:05,648 INFO    SenderThread:746 [job_builder.py:_get_source_type():439] no source found
+2024-11-06 22:06:05,648 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 9
+2024-11-06 22:06:05,648 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:05,648 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 9
+2024-11-06 22:06:05,648 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:05,648 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-11-06 22:06:05,648 INFO    SenderThread:746 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-11-06 22:06:05,812 INFO    SenderThread:746 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/output.log
+2024-11-06 22:06:05,813 INFO    SenderThread:746 [dir_watcher.py:finish():388] scan: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files
+2024-11-06 22:06:05,813 INFO    SenderThread:746 [dir_watcher.py:finish():402] scan save: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/requirements.txt requirements.txt
+2024-11-06 22:06:05,814 INFO    SenderThread:746 [dir_watcher.py:finish():402] scan save: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/output.log output.log
+2024-11-06 22:06:05,816 INFO    SenderThread:746 [dir_watcher.py:finish():402] scan save: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/config.yaml config.yaml
+2024-11-06 22:06:05,819 INFO    SenderThread:746 [dir_watcher.py:finish():402] scan save: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/wandb-summary.json wandb-summary.json
+2024-11-06 22:06:05,821 INFO    SenderThread:746 [dir_watcher.py:finish():402] scan save: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/conda-environment.yaml conda-environment.yaml
+2024-11-06 22:06:05,823 INFO    SenderThread:746 [dir_watcher.py:finish():402] scan save: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/wandb-metadata.json wandb-metadata.json
+2024-11-06 22:06:05,824 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 10
+2024-11-06 22:06:05,825 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:05,825 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 10
+2024-11-06 22:06:05,826 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:05,826 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-11-06 22:06:05,826 INFO    SenderThread:746 [file_pusher.py:finish():172] shutting down file pusher
+2024-11-06 22:06:06,299 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-06 22:06:06,300 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: poll_exit
+2024-11-06 22:06:06,432 INFO    wandb-upload_4:746 [upload_job.py:push():131] Uploaded file /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/conda-environment.yaml
+2024-11-06 22:06:06,433 INFO    wandb-upload_2:746 [upload_job.py:push():131] Uploaded file /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/config.yaml
+2024-11-06 22:06:06,467 INFO    wandb-upload_1:746 [upload_job.py:push():131] Uploaded file /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/output.log
+2024-11-06 22:06:06,477 INFO    wandb-upload_3:746 [upload_job.py:push():131] Uploaded file /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/wandb-summary.json
+2024-11-06 22:06:07,304 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-06 22:06:07,305 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: poll_exit
+2024-11-06 22:06:07,892 INFO    wandb-upload_0:746 [upload_job.py:push():131] Uploaded file /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/files/requirements.txt
+2024-11-06 22:06:08,096 INFO    Thread-11 (_thread_body):746 [sender.py:transition_state():613] send defer: 11
+2024-11-06 22:06:08,097 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:08,097 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 11
+2024-11-06 22:06:08,097 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:08,097 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-11-06 22:06:08,097 INFO    SenderThread:746 [file_pusher.py:join():178] waiting for file pusher
+2024-11-06 22:06:08,098 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 12
+2024-11-06 22:06:08,098 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:08,098 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 12
+2024-11-06 22:06:08,098 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:08,098 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-11-06 22:06:08,098 INFO    SenderThread:746 [file_stream.py:finish():595] file stream finish called
+2024-11-06 22:06:08,310 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-06 22:06:10,553 INFO    SenderThread:746 [file_stream.py:finish():599] file stream finish is done
+2024-11-06 22:06:10,553 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 13
+2024-11-06 22:06:10,553 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: poll_exit
+2024-11-06 22:06:10,554 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:10,554 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 13
+2024-11-06 22:06:10,554 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:10,554 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-11-06 22:06:10,554 INFO    SenderThread:746 [sender.py:transition_state():613] send defer: 14
+2024-11-06 22:06:10,555 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: defer
+2024-11-06 22:06:10,555 DEBUG   SenderThread:746 [sender.py:send():378] send: final
+2024-11-06 22:06:10,555 INFO    HandlerThread:746 [handler.py:handle_request_defer():172] handle defer: 14
+2024-11-06 22:06:10,555 DEBUG   SenderThread:746 [sender.py:send():378] send: footer
+2024-11-06 22:06:10,555 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: defer
+2024-11-06 22:06:10,555 INFO    SenderThread:746 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-11-06 22:06:10,556 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-06 22:06:10,556 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-06 22:06:10,556 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: poll_exit
+2024-11-06 22:06:10,556 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: server_info
+2024-11-06 22:06:10,557 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: poll_exit
+2024-11-06 22:06:10,557 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: get_summary
+2024-11-06 22:06:10,557 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: server_info
+2024-11-06 22:06:10,557 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: sampled_history
+2024-11-06 22:06:10,559 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-06 22:06:10,559 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: job_info
+2024-11-06 22:06:11,061 DEBUG   SenderThread:746 [sender.py:send_request():405] send_request: job_info
+2024-11-06 22:06:11,062 INFO    MainThread:746 [wandb_run.py:_footer_history_summary_info():3851] rendering history
+2024-11-06 22:06:11,062 INFO    MainThread:746 [wandb_run.py:_footer_history_summary_info():3883] rendering summary
+2024-11-06 22:06:11,062 INFO    MainThread:746 [wandb_run.py:_footer_sync_info():3810] logging synced files
+2024-11-06 22:06:11,063 DEBUG   HandlerThread:746 [handler.py:handle_request():146] handle_request: shutdown
+2024-11-06 22:06:11,063 INFO    HandlerThread:746 [handler.py:finish():869] shutting down handler
+2024-11-06 22:06:11,562 INFO    WriterThread:746 [datastore.py:close():296] close: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter/wandb/run-20241106_220556-erxotre9/run-erxotre9.wandb
+2024-11-06 22:06:12,066 INFO    SenderThread:746 [sender.py:finish():1521] shutting down sender
+2024-11-06 22:06:12,067 INFO    SenderThread:746 [file_pusher.py:finish():172] shutting down file pusher
+2024-11-06 22:06:12,067 INFO    SenderThread:746 [file_pusher.py:join():178] waiting for file pusher

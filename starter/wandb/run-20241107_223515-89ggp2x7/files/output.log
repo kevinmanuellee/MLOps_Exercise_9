@@ -1,0 +1,203 @@
+[1m================================================================================================== test session starts ==================================================================================================
+platform darwin -- Python 3.12.7, pytest-8.0.2, pluggy-1.5.0 -- /opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /Users/kevinmanuel/Desktop/MLOps Model Workflow Exercises/lesson-3-data-validation/exercises/exercise_9/starter
+[1mcollected 1 item                                                                                                                                                                                                        
+test_data.py::test_kolmogorov_smirnov [31mFAILED
+======================================================================================================= FAILURES ========================================================================================================
+[31m[1m________________________________________________________________________________________________ test_kolmogorov_smirnov ________________________________________________________________________________________________
+data = (Empty DataFrame
+Columns: [Unnamed: 0.1, Unnamed: 0, danceability, energy, key, loudness, mode, speechiness, acousticn...talness, liveness, valence, tempo, type, duration_ms, time_signature, genre, song_name, title, text_feature]
+Index: [])
+ks_alpha = 0.05
+    def test_kolmogorov_smirnov(data, ks_alpha):
+        sample1, sample2 = data
+        columns = [
+            "danceability",
+            "energy",
+            "loudness",
+            "speechiness",
+            "acousticness",
+            "instrumentalness",
+            "liveness",
+            "valence",
+            "tempo",
+            "duration_ms"
+        ]
+        # Bonferroni correction for multiple hypothesis testing
+        # (see my blog post on this topic to see where this comes from:
+        # https://towardsdatascience.com/precision-and-recall-trade-off-and-multiple-hypothesis-testing-family-wise-error-rate-vs-false-71a85057ca2b)
+        alpha_prime = 1 - (1 - ks_alpha)**(1 / len(columns))
+        for col in columns:
+>           ts, p_value = scipy.stats.ks_2samp(sample1[col], sample2[col])
+[31m[1mtest_data.py[39m[22m:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+[31m[1m/opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/scipy/stats/_axis_nan_policy.py[39m[22m:531: in axis_nan_policy_wrapper
+    res = hypotest_fun_out(*samples, **kwds)
+[31m[1m/opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/scipy/_lib/_util.py[39m[22m:779: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+data1 = array([], dtype=float64), data2 = array([], dtype=float64), alternative = 'two-sided', method = 'auto'
+    @_axis_nan_policy_factory(_tuple_to_KstestResult, n_samples=2, n_outputs=4,
+                              result_to_tuple=_KstestResult_to_tuple)
+    @_rename_parameter("mode", "method")
+    def ks_2samp(data1, data2, alternative='two-sided', method='auto'):
+        """
+        Performs the two-sample Kolmogorov-Smirnov test for goodness of fit.
+        This test compares the underlying continuous distributions F(x) and G(x)
+        of two independent samples.  See Notes for a description of the available
+        null and alternative hypotheses.
+        Parameters
+        ----------
+        data1, data2 : array_like, 1-Dimensional
+            Two arrays of sample observations assumed to be drawn from a continuous
+            distribution, sample sizes can be different.
+        alternative : {'two-sided', 'less', 'greater'}, optional
+            Defines the null and alternative hypotheses. Default is 'two-sided'.
+            Please see explanations in the Notes below.
+        method : {'auto', 'exact', 'asymp'}, optional
+            Defines the method used for calculating the p-value.
+            The following options are available (default is 'auto'):
+              * 'auto' : use 'exact' for small size arrays, 'asymp' for large
+              * 'exact' : use exact distribution of test statistic
+              * 'asymp' : use asymptotic distribution of test statistic
+        Returns
+        -------
+        res: KstestResult
+            An object containing attributes:
+            statistic : float
+                KS test statistic.
+            pvalue : float
+                One-tailed or two-tailed p-value.
+            statistic_location : float
+                Value from `data1` or `data2` corresponding with the KS statistic;
+                i.e., the distance between the empirical distribution functions is
+                measured at this observation.
+            statistic_sign : int
+                +1 if the empirical distribution function of `data1` exceeds
+                the empirical distribution function of `data2` at
+                `statistic_location`, otherwise -1.
+        See Also
+        --------
+        kstest, ks_1samp, epps_singleton_2samp, anderson_ksamp
+        Notes
+        -----
+        There are three options for the null and corresponding alternative
+        hypothesis that can be selected using the `alternative` parameter.
+        - `less`: The null hypothesis is that F(x) >= G(x) for all x; the
+          alternative is that F(x) < G(x) for at least one x. The statistic
+          is the magnitude of the minimum (most negative) difference between the
+          empirical distribution functions of the samples.
+        - `greater`: The null hypothesis is that F(x) <= G(x) for all x; the
+          alternative is that F(x) > G(x) for at least one x. The statistic
+          is the maximum (most positive) difference between the empirical
+          distribution functions of the samples.
+        - `two-sided`: The null hypothesis is that the two distributions are
+          identical, F(x)=G(x) for all x; the alternative is that they are not
+          identical. The statistic is the maximum absolute difference between the
+          empirical distribution functions of the samples.
+        Note that the alternative hypotheses describe the *CDFs* of the
+        underlying distributions, not the observed values of the data. For example,
+        suppose x1 ~ F and x2 ~ G. If F(x) > G(x) for all x, the values in
+        x1 tend to be less than those in x2.
+        If the KS statistic is large, then the p-value will be small, and this may
+        be taken as evidence against the null hypothesis in favor of the
+        alternative.
+        If ``method='exact'``, `ks_2samp` attempts to compute an exact p-value,
+        that is, the probability under the null hypothesis of obtaining a test
+        statistic value as extreme as the value computed from the data.
+        If ``method='asymp'``, the asymptotic Kolmogorov-Smirnov distribution is
+        used to compute an approximate p-value.
+        If ``method='auto'``, an exact p-value computation is attempted if both
+        sample sizes are less than 10000; otherwise, the asymptotic method is used.
+        In any case, if an exact p-value calculation is attempted and fails, a
+        warning will be emitted, and the asymptotic p-value will be returned.
+        The 'two-sided' 'exact' computation computes the complementary probability
+        and then subtracts from 1.  As such, the minimum probability it can return
+        is about 1e-16.  While the algorithm itself is exact, numerical
+        errors may accumulate for large sample sizes.   It is most suited to
+        situations in which one of the sample sizes is only a few thousand.
+        We generally follow Hodges' treatment of Drion/Gnedenko/Korolyuk [1]_.
+        References
+        ----------
+        .. [1] Hodges, J.L. Jr.,  "The Significance Probability of the Smirnov
+               Two-Sample Test," Arkiv fiur Matematik, 3, No. 43 (1958), 469-486.
+        Examples
+        --------
+        Suppose we wish to test the null hypothesis that two samples were drawn
+        from the same distribution.
+        We choose a confidence level of 95%; that is, we will reject the null
+        hypothesis in favor of the alternative if the p-value is less than 0.05.
+        If the first sample were drawn from a uniform distribution and the second
+        were drawn from the standard normal, we would expect the null hypothesis
+        to be rejected.
+        >>> import numpy as np
+        >>> from scipy import stats
+        >>> rng = np.random.default_rng()
+        >>> sample1 = stats.uniform.rvs(size=100, random_state=rng)
+        >>> sample2 = stats.norm.rvs(size=110, random_state=rng)
+        >>> stats.ks_2samp(sample1, sample2)
+        KstestResult(statistic=0.5454545454545454, pvalue=7.37417839555191e-15)
+        Indeed, the p-value is lower than our threshold of 0.05, so we reject the
+        null hypothesis in favor of the default "two-sided" alternative: the data
+        were *not* drawn from the same distribution.
+        When both samples are drawn from the same distribution, we expect the data
+        to be consistent with the null hypothesis most of the time.
+        >>> sample1 = stats.norm.rvs(size=105, random_state=rng)
+        >>> sample2 = stats.norm.rvs(size=95, random_state=rng)
+        >>> stats.ks_2samp(sample1, sample2)
+        KstestResult(statistic=0.10927318295739348, pvalue=0.5438289009927495)
+        As expected, the p-value of 0.54 is not below our threshold of 0.05, so
+        we cannot reject the null hypothesis.
+        Suppose, however, that the first sample were drawn from
+        a normal distribution shifted toward greater values. In this case,
+        the cumulative density function (CDF) of the underlying distribution tends
+        to be *less* than the CDF underlying the second sample. Therefore, we would
+        expect the null hypothesis to be rejected with ``alternative='less'``:
+        >>> sample1 = stats.norm.rvs(size=105, loc=0.5, random_state=rng)
+        >>> stats.ks_2samp(sample1, sample2, alternative='less')
+        KstestResult(statistic=0.4055137844611529, pvalue=3.5474563068855554e-08)
+        and indeed, with p-value smaller than our threshold, we reject the null
+        hypothesis in favor of the alternative.
+        """
+        mode = method
+        if mode not in ['auto', 'exact', 'asymp']:
+            raise ValueError(f'Invalid value for mode: {mode}')
+        alternative = {'t': 'two-sided', 'g': 'greater', 'l': 'less'}.get(
+            alternative.lower()[0], alternative)
+        if alternative not in ['two-sided', 'less', 'greater']:
+            raise ValueError(f'Invalid value for alternative: {alternative}')
+        MAX_AUTO_N = 10000  # 'auto' will attempt to be exact if n1,n2 <= MAX_AUTO_N
+        if np.ma.is_masked(data1):
+            data1 = data1.compressed()
+        if np.ma.is_masked(data2):
+            data2 = data2.compressed()
+        data1 = np.sort(data1)
+        data2 = np.sort(data2)
+        n1 = data1.shape[0]
+        n2 = data2.shape[0]
+        if min(n1, n2) == 0:
+>           raise ValueError('Data passed to ks_2samp must not be empty')
+[31m[1mE           ValueError: Data passed to ks_2samp must not be empty
+[31m[1m/opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/scipy/stats/_stats_py.py[39m[22m:8781: ValueError
+[33m=================================================================================================== warnings summary ====================================================================================================
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.MessageMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.ScalarMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+../../../../../../../../opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/wandb/analytics/sentry.py:90
+  /opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+    self.hub = sentry_sdk.Hub(client)
+../../../../../../../../opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/google/protobuf/internal/well_known_types.py:174
+../../../../../../../../opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/google/protobuf/internal/well_known_types.py:174
+../../../../../../../../opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/google/protobuf/internal/well_known_types.py:174
+../../../../../../../../opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/google/protobuf/internal/well_known_types.py:174
+test_data.py::test_kolmogorov_smirnov
+test_data.py::test_kolmogorov_smirnov
+test_data.py::test_kolmogorov_smirnov
+  /opt/anaconda3/envs/mlflow-60000e2b97642ccc38c7a9ee503977f0abd54819/lib/python3.12/site-packages/google/protobuf/internal/well_known_types.py:174: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    self.FromDatetime(datetime.datetime.utcnow())
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+[36m[1m================================================================================================ short test summary info ================================================================================================
+[31mFAILED[39m test_data.py::[1mtest_kolmogorov_smirnov[22m - ValueError: Data passed to ks_2samp must not be empty
+[31m============================================================================================ [1m1 failed[39m[22m, [33m10 warnings[31m in 4.46s =============================================================================================

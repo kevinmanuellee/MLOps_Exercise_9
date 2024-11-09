@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/kevinmanuel/Desktop/MLOps%20Model%20Workflow%20Exercises/lesson-3-data-validation/exercises/exercise_9/starter/mlruns/0/a8db619926544cffb4790252facd16da/artifacts
+end_time: 1730902230177
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a8db619926544cffb4790252facd16da
+run_name: delicate-auk-587
+run_uuid: a8db619926544cffb4790252facd16da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730902215328
+status: 4
+tags: []
+user_id: kevinmanuel

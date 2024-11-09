@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/kevinmanuel/Desktop/MLOps%20Model%20Workflow%20Exercises/lesson-3-data-validation/exercises/exercise_9/starter/mlruns/0/cee9d514601043afa4a0e848b14d0a6d/artifacts
+end_time: 1730901973075
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cee9d514601043afa4a0e848b14d0a6d
+run_name: stately-toad-793
+run_uuid: cee9d514601043afa4a0e848b14d0a6d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730901952616
+status: 4
+tags: []
+user_id: kevinmanuel
